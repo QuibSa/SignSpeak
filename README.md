@@ -1,30 +1,57 @@
-**SignSpeak – Real-Time ISL to Voice Translator**
+# **SignSpeak – Real-Time Indian Sign Language (ISL) Translator**
 
-SignSpeak is a real-time Indian Sign Language translator built using OpenCV for webcam input, MediaPipe for hand-landmark detection, and a CNN-based machine learning model. It recognizes all 26 alphabets (A–Z) along with gestures for space and backspace, converting them into text and speech—essentially enabling “typing” through ISL.
 
-#Dataset & Tools
+SignSpeak is a real-time ISL-to-Text-and-Voice translation system built using OpenCV, MediaPipe, and a CNN-based gesture recognition model. It recognizes all 26 alphabets (A–Z) along with gestures for Space and Backspace, allowing users to “type” using ISL and convert it into both text and audio output.
 
-Dataset: Manually created using a webcam and OpenCV; includes 27 gesture classes (A–Z + Backspace).
-Note: Space is detected when no hand is shown for a fixed duration.
+# **✨ Features**
 
-Language: Python 3.9.x
+
+Real-time gesture recognition using a webcam
+
+Hand landmark detection via MediaPipe
+
+Custom CNN achieving high accuracy on a 27-class dataset
+
+Converts recognized signs into text and speech
+
+Supports Space and Backspace gestures for smooth typing experience
+
+# **📁 Dataset**
+
+Dataset created manually using webcam + OpenCV
+
+Total 27 classes (A–Z + Backspace)
+
+Note: “Space” is detected automatically when no hand is visible for a set duration
+
+Dataset included as 27 ZIP files
+
+Alternatively, you can generate your own dataset using the provided scripts
+
+# **🛠️ Tech Stack**
+
+Programming Language: Python 3.9.x
 
 Libraries: OpenCV, MediaPipe, TensorFlow/Keras, NumPy, scikit-learn, pyttsx3
 
-Model: Custom CNN
+Model Used: CNN
 
-Metrics: Accuracy, Precision, Recall, F1-Score
+Evaluation Metrics: Accuracy, Precision, Recall, F1-score
 
-#How to Run
+# **🚀 How to Run**
 
 Install all required Python libraries (tested on Python 3.9.x).
 
-Download the dataset (27 ZIP files) and place them in a folder named data.
+Download and extract the 27 ZIP files into a folder named data/.
 
-If using your own dataset, run createData.py and createBackspace.py instead.
+If generating your own dataset, run:
+
+createData.py
+
+createBackspace.py
 
 Run preprocess_alphabet.py to generate the landmarks .pickle file.
 
-Train the model using train_alphabet_model.py (default model: CNN; customizable).
+Train the model using train_alphabet_model.py.
 
-Launch test_real_time.py to activate the webcam and begin real-time gesture translation.
+Run test_real_time.py to start the webcam and translate gestures in real time.
