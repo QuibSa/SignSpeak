@@ -1,4 +1,4 @@
-#SignSpeak – Real-Time ISL to Voice Translator
+**SignSpeak – Real-Time ISL to Voice Translator**
 
 SignSpeak is a real-time Indian Sign Language translator built using OpenCV for webcam input, MediaPipe for hand-landmark detection, and a CNN-based machine learning model. It recognizes all 26 alphabets (A–Z) along with gestures for space and backspace, converting them into text and speech—essentially enabling “typing” through ISL.
 
